@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import images from '../../../images/index'
+import { GetLadybugs } from '../../Utils/getLadybugs'
 
 export const DisplayContent = (props) => {
 
@@ -11,10 +12,11 @@ export const DisplayContent = (props) => {
 
     if (names.length !== 0 && imageLocations.length !== 0) {
         outputJSX.push(
-            <>
-                <h1>{names[0]}</h1>
-                <img src={images['Coccinella']}></img>
+            <><>
+                <h1>{names[2]}</h1>
+                <img src={imageLocations[2]} alt=""></img>
             </>
+            <div>{ GetLadybugs } </div></>
         );
     }
 
