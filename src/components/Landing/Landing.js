@@ -9,6 +9,12 @@ export const Landing = () => {
 
     function gotDataCallback (data) {
         //console.log(data)
+        const obj = JSON.parse(data)
+        
+        const {name, imageLocations, description } = obj
+        // console.log(name)
+        // console.log(imageLocations)
+        // console.log(description)
     }
 
     return (
@@ -16,12 +22,16 @@ export const Landing = () => {
             <h1>Landing Page</h1>
 
             <DisplayContent
-                names={["Ladybug1", "Ladybug2", "Ladybug3"]}
-                imageLocations={[
-                    "Coccinella.jpg",
-                    "image2.jpg",
-                    "image3.jpg",
-                ]}
+
+                names={obj.name}
+                imageLocation={obj.imageLocations}  
+                // names={["Ladybug1", "Ladybug2", "Ladybug3"]}
+                // imageLocations={[
+                //     "Coccinella.jpg",
+                //     "image2.jpg",
+                //     "image3.jpg",
+                // ]}
+            
             />
         </>
     );
